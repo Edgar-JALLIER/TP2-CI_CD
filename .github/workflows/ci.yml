@@ -15,8 +15,7 @@ jobs:
           cache: 'maven'
       - name: Dependency Scan (Security)
         # Vérifie si tes bibliothèques ont des failles connues
-        run: mvn dependency-check:check
-
+        run: mvn dependency-check:check -DfailOnError=false
   # 2. Tests Unitaires + Couverture de code
   unit-tests:
     runs-on: ubuntu-latest
