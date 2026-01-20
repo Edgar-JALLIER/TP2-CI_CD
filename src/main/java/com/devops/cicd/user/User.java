@@ -25,7 +25,9 @@ public class User {
     }
 
     private void validateRole(Role role) {
-        if (role == null) throw new IllegalArgumentException("role must not be null");
+        if (role == null) {
+            throw new IllegalArgumentException("role must not be null");
+        }
     }
 
     public boolean canAccessAdminArea() {
